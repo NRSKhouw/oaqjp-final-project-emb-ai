@@ -23,8 +23,10 @@ def sent_analyzer():
                 f"For the given statement, the system response is {emotion_values}. "
                 f"The dominant emotion is <b>{response['dominant_emotion']}</b>."
                 )
-
-    return output
+    if response['anger'] is None:
+        return "<b>Invalid text! Please try again!</b>"
+    else:
+        return output
 
 @app.route("/")
 def render_index_page():
