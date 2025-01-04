@@ -16,4 +16,4 @@ def emotion_detector(text_to_analyse):
     elif response.status_code == 400:
         emotion_score = {'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
 
-    return emotion_score
+    return formatted_response
